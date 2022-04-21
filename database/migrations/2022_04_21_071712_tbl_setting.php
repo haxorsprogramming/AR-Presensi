@@ -13,7 +13,13 @@ class TblSetting extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_setting', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('kd_setting', 50);
+            $table -> char('nama_setting', 100);
+            $table -> char('value', 255);
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblSetting extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_setting');
     }
 }

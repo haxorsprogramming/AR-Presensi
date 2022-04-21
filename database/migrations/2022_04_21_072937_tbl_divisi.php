@@ -13,7 +13,13 @@ class TblDivisi extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_divisi', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('kd_divisi', 50);
+            $table -> char('nama_divisi', 100);
+            $table -> text('keterangan') -> nullable();
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblDivisi extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_divisi');
     }
 }

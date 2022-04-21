@@ -13,7 +13,14 @@ class TblDataPresensi extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_data_presensi', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('token', 200);
+            $table -> char('kd_jadwal', 50);
+            $table -> char('username', 150);
+            $table -> date('tanggal');
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class TblDataPresensi extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_data_presensi');
     }
 }

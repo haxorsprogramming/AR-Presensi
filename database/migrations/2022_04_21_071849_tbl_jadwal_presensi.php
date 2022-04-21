@@ -13,7 +13,15 @@ class TblJadwalPresensi extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_jadwal_presensi', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('kd_jadwal', 50);
+            $table -> char('judul', 200);
+            $table -> text('keterangan') -> nullable();
+            $table -> char('kd_divisi', 50);
+            $table -> date('tanggal');
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class TblJadwalPresensi extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_jadwal_presensi');
     }
 }
