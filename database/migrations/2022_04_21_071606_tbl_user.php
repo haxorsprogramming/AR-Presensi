@@ -13,7 +13,14 @@ class TblUser extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_user', function (Blueprint $table) {
+            $table -> id();
+            $table -> char('username', 150);
+            $table -> enum('role', ['admin', 'operator', 'karyawan']);
+            $table -> char('password', 200);
+            $table -> text('api_token') -> nullable();
+            $table -> timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class TblUser extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_user');
     }
 }

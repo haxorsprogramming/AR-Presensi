@@ -10,7 +10,7 @@ class C_Home extends Controller
     public function homepage()
     {
         $code = Str::uuid();
-        $qrcode = QrCode::size(400)->generate($code);
+        $qrcode = QrCode::size(400) -> generate($code);
         echo $qrcode;
     }
 }
