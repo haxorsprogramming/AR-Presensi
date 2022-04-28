@@ -55,5 +55,7 @@ class C_Auth extends Controller
         $request -> session() -> flush();
         return redirect('/auth/login');
     }
+    
+    
 
 }

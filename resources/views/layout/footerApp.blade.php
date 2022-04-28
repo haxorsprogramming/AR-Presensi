@@ -79,9 +79,8 @@
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/morris.js/morris.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/raphael/raphael.min.js"></script>
 
-<script src="{{ asset('ladun/lexa/') }}/assets/js/pages/dashboard.init.js"></script>
 
-<!-- <script src="{{ asset('ladun/lexa/') }}/assets/js/app.js"></script> -->
+<script src="{{ asset('ladun/lexa/') }}/assets/js/app.js"></script>
 
 
 
