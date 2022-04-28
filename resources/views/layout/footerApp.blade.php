@@ -2,9 +2,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    © <script>
-                        document.write(new Date().getFullYear())
-                    </script> Lexa <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
+                <p>© 2022 AR-Presensi – Sistem Presensi Simpel Terbaik | Develop by
+          <a href="http://tukanglemari.com" class="link link--gray">Aditia Darma Nst</a></p>
                 </div>
             </div>
         </div>
@@ -68,6 +67,10 @@
 <div class="rightbar-overlay"></div>
 
 <!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/metismenu/metisMenu.min.js"></script>
@@ -80,9 +83,14 @@
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/raphael/raphael.min.js"></script>
 
 
+
 <script src="{{ asset('ladun/lexa/') }}/assets/js/app.js"></script>
 
+<script>
+    const server = "{{ url('') }}/";
+</script>
 
+<script src="{{ asset('ladun/base/') }}/js/mainApp.js"></script>
 
 </body>
 

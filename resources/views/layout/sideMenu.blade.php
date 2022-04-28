@@ -10,14 +10,14 @@
                 <li class="menu-title">Main</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect">
+                    <a href="javascript:void(0)" onclick="renderPage('main/beranda', 'Dashboard')" class="waves-effect">
                         <i class="mdi mdi-view-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="calendar.html" class=" waves-effect">
+                    <a href="javascript:void(0)" onclick="renderPage('main/beranda', 'Monitoring Presensi')" class=" waves-effect">
                         <i class="mdi mdi-calendar-check"></i>
                         <span>Monitoring Presensi</span>
                     </a>

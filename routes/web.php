@@ -16,5 +16,5 @@ Route::post('/auth/login/process', [C_Auth::class, 'loginprocess']);
 Route::get('/auth/logout', [C_Auth::class, 'logout']);
 
 Route::get('/main/dashboard', [C_Main_App::class, 'dashboardpage']);
-
+Route::get('/main/beranda', [C_Main_App::class, 'berandapage']);
 // api untuk rekap absensi otomatis 
