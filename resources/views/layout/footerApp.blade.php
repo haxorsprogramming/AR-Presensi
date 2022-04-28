@@ -1,13 +1,14 @@
 <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
                 <p>© 2022 AR-Presensi – Sistem Presensi Simpel Terbaik | Develop by
-          <a href="http://tukanglemari.com" class="link link--gray">Aditia Darma Nst</a></p>
-                </div>
+                    <a href="http://tukanglemari.com" class="link link--gray">Aditia Darma Nst</a>
+                </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </div>
 <!-- end main content-->
 
@@ -82,6 +83,21 @@
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/morris.js/morris.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/raphael/raphael.min.js"></script>
 
+<!-- Required datatable js -->
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/jszip/jszip.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/pdfmake/build/vfs_fonts.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+<!-- Responsive examples -->
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
 
 <script src="{{ asset('ladun/lexa/') }}/assets/js/app.js"></script>

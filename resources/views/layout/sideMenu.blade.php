@@ -30,7 +30,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="javascript:void(0)">Data Karyawan</a></li>
-                        <li><a href="javascript:void(0)">Data Divisi</a></li>
+                        <li><a href="javascript:void(0)" onclick="renderPage('app/divisi', 'Data Divisi')">Data Divisi</a></li>
                         <li><a href="javascript:void(0)">Kategori Absensi</a></li>
                     </ul>
                 </li>

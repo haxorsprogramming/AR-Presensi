@@ -10,7 +10,8 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('ladun/lexa/') }}/assets/images/favicon.ico">
-
+    <!-- Datatables Css -->
+    <link href="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Bootstrap Css -->
     <link href="{{ asset('ladun/lexa/') }}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->

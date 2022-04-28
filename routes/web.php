@@ -6,6 +6,7 @@ use App\Http\Controllers\C_Home;
 use App\Http\Controllers\C_Auth;
 use App\Http\Controllers\C_Api;
 use App\Http\Controllers\C_Main_App;
+use App\Http\Controllers\C_Divisi;
 
 Route::get('/', [C_Home::class, 'homepage']);
 
@@ -17,4 +18,8 @@ Route::get('/auth/logout', [C_Auth::class, 'logout']);
 
 Route::get('/main/dashboard', [C_Main_App::class, 'dashboardpage']);
 Route::get('/main/beranda', [C_Main_App::class, 'berandapage']);
+
+// divisi 
+Route::get('/app/divisi', [C_Divisi::class, 'divisipage']);
+
 // api untuk rekap absensi otomatis 
