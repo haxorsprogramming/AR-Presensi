@@ -1,5 +1,6 @@
 // route 
 var rToLoginProcess = server + "auth/login/process";
+var rToDashboard = server + "main/dashboard";
 // vue object 
 var loginApp = new Vue({
     el : '#loginApp',
@@ -26,7 +27,13 @@ function loginProses()
     }else{
         let ds = {'username':username, 'password':password}
         axios.post(rToLoginProcess, ds).then(function(res){
-            console.log(res.data);
+            if(res.data.status === 'NO_USER'){
+                pesanUmumApp('warning', 'No user !!!', 'Tidak ada user terdaftar !!!');
+            }else if(res.data.status === 'WRONG_PASSWORD'){
+                pesanUmumApp('warning', 'Wrong password !!!', 'Username / password salah !!!');
+            }else{
+                window.location.assign(rToDashboard);
+            }
         });
     }
 
