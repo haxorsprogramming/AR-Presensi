@@ -10,14 +10,18 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Nama Divisi</label>
-                    <input type="text" class="form-control" id="txtNamaDivisi" />
+                    <input type="text" class="form-control" id="txtNamaDivisi">
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label>Keterangan Divisi</label>
-                    <textarea class="form-control" style="resize:none;"></textarea>
+                    <textarea class="form-control" id="txtKeterangan" style="resize:none;"></textarea>
+                </div>
+                <div>
+
                 </div>
             </div>
             <div class="modal-footer">
+                <a href="javascript:void(0)" class="btn btn-primary" @click="prosesTambahData">Simpan Data</a>
                 <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
 
             </div>

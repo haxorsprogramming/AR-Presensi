@@ -14,14 +14,24 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nama Produk</th>
-                            <th>Harga</th>
-                            <th>Kategori</th>
+                            <th>Kd</th>
+                            <th>Nama Divisi</th>
+                            <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($dataDivisi as $divisi)
+                    <tr>
+                        <td>{{ $loop -> iteration }}</td>
+                        <td>{{ substr($divisi -> kd_divisi,0,6) }}</td>
+                        <td><strong>{{ $divisi -> nama_divisi }}</strong></td>
+                        <td>{{ $divisi -> keterangan }}</td>
+                        <td>
 
+                        </td>
+                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
