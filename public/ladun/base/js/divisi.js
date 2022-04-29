@@ -7,7 +7,7 @@ var appDivisi = new Vue({
     methods : {
         tambahDivisiAtc : function()
         {
-            $("#myModal").modal("show");
+            $('#modalTambahDivisi').appendTo("body").modal('show');
         }
     }
 });

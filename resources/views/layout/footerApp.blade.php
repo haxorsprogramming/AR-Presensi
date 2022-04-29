@@ -72,16 +72,12 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{{ asset('ladun/lexa/') }}/assets/libs/jquery/jquery.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/metismenu/metisMenu.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/simplebar/simplebar.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/node-waves/waves.min.js"></script>
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
-
-<!--Morris Chart-->
-<script src="{{ asset('ladun/lexa/') }}/assets/libs/morris.js/morris.min.js"></script>
-<script src="{{ asset('ladun/lexa/') }}/assets/libs/raphael/raphael.min.js"></script>
 
 <!-- Required datatable js -->
 <script src="{{ asset('ladun/lexa/') }}/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>

@@ -3,7 +3,7 @@
         <div class="card-body">
             <h4 class="header-title">Data Divisi</h4>
             <p class="card-title-desc">
-                <a class="btn btn-primary waves-effect waves-light" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal">
+                <a class="btn btn-primary waves-effect waves-light" href="javascript:void(0)" @click="tambahDivisiAtc()">
                     <i class="mdi mdi-plus-box-multiple-outline"></i>
                     Tambah Divisi Baru
                 </a>&nbsp;
