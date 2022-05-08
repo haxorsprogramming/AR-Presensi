@@ -35,4 +35,10 @@ class C_Divisi extends Controller
         );
     }
 
+    public function dataDivisiRest(Request $request, $id)
+    {
+        $dataDivisi = M_Divisi::where('kd_divisi', $id) -> first();
+        return \Response::json($dataDivisi);
+    }
+
 }

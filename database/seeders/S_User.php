@@ -25,7 +25,10 @@ class S_User extends Seeder
     {
         M_User::firstOrCreate(
             ['username' => $username],
-            ['role' => $role, 'password' => password_hash($password, PASSWORD_DEFAULT)]
+            [
+                'role' => $role, 
+                'password' => password_hash($password, PASSWORD_DEFAULT)
+            ]
         );
         M_User_Profile::firstOrCreate(
             ['username' => $username],

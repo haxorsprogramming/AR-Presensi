@@ -10,7 +10,7 @@ var appDivisi = new Vue({
     methods : {
         tambahDivisiAtc : function()
         {
-            $('#modalTambahDivisi').modal('show');
+            $("#modalTambahDivisi").modal("show");
         },
         prosesTambahData : function()
         {
@@ -32,7 +32,10 @@ var appDivisi = new Vue({
         },
         editAtc : function(kdDivisi)
         {
-            console.log(kdDivisi);
+            axios.get(server + "app/divisi/"+kdDivisi+"/rest").then(function(res){
+                console.log(res.data);
+                $("#modalEditDivisi").modal("show");
+            });
         }
     }
 });
