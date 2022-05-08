@@ -23,6 +23,33 @@ class C_Divisi extends Controller
         return \Response::json($dr);
     }
 
+
+    public function dataDivisiRest(Request $request, $id)
+    {
+        $dataDivisi = M_Divisi::where('kd_divisi', $id) -> first();
+        return \Response::json($dataDivisi);
+    }
+
+    public function prosesUpdateDivisi(Request $request)
+    {
+        // {'nama':nama, 'keterangan':keterangan, 'kdDivisi':kdDivisi}
+        $cd = M_Divisi::where('kd_divisi', $request -> kdDivisi) -> count();
+        if($cd != 0){
+            // cek nama divisi 
+            $cnd = M_Divisi::where('nama_divisi', $request -> nama) -> count();
+            if($cnd > 0){
+                $cnd = M_Divisi::where('nama_divisi', $request -> nama) -> first();
+                if($cnd -> nama_divisi != $request -> nama){
+                    $this -> subProsesUpdateDivisi($request -> kdDivisi, $request -> nama, $request -> keterangan);
+                }
+            }else{
+                $this -> subProsesUpdateDivisi($request -> kdDivisi, $request -> nama, $request -> keterangan);
+            }
+        }
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
+    }
+
     function subProsesTambahDivisi($nama, $keterangan)
     {
         M_Divisi::firstOrCreate(
@@ -35,10 +62,12 @@ class C_Divisi extends Controller
         );
     }
 
-    public function dataDivisiRest(Request $request, $id)
+    function subProsesUpdateDivisi($kdDivisi, $nama, $keterangan)
     {
-        $dataDivisi = M_Divisi::where('kd_divisi', $id) -> first();
-        return \Response::json($dataDivisi);
+        M_Divisi::where('kd_divisi', $kdDivisi) -> update([
+            'nama_divisi' => $nama,
+            'keterangan' => $keterangan
+        ]);
     }
 
 }

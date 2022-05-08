@@ -41,11 +41,11 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Nama Divisi</label>
-                    <input type="text" class="form-control" id="txtNamaDivisi">
+                    <input type="text" class="form-control" id="txtNamaDivisiEdit">
                 </div>
                 <div class="form-group mt-2">
                     <label>Keterangan Divisi</label>
-                    <textarea class="form-control" id="txtKeterangan" style="resize:none;"></textarea>
+                    <textarea class="form-control" id="txtKeteranganEdit" style="resize:none;"></textarea>
                 </div>
                 <div>
 
