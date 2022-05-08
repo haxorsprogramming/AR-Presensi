@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="javascript:void(0)" class="btn btn-primary" @click="prosesTambahData">Simpan Data</a>
+                <a href="javascript:void(0)" class="btn btn-primary" @click="prosesTambahData()">Simpan Data</a>
                 <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
 
             </div>

@@ -1,5 +1,4 @@
 @include('layout.headerApp')
-@include('layout.sideMenu')
 
 <!-- ============================================================== -->
 <!-- Start right Content here -->

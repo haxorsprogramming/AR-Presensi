@@ -28,7 +28,7 @@
                         <td><strong>{{ $divisi -> nama_divisi }}</strong></td>
                         <td>{{ $divisi -> keterangan }}</td>
                         <td>
-
+                            <a href="javascript:void(0)" class="btn btn-info" @click="editAtc('{{ $divisi -> kd_divisi }}')">Edit</a>
                         </td>
                     </tr>
                     @endforeach
