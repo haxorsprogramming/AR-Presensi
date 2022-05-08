@@ -10,24 +10,23 @@ var appDivisi = new Vue({
     methods : {
         tambahDivisiAtc : function()
         {
-            $('#modalTambahDivisi').appendTo("body").modal('show');
+            $('#modalTambahDivisi').modal('show');
         },
         prosesTambahData : function()
         {
             let namaDivisi = document.querySelector("#txtNamaDivisi").value;
-            // console.log(namaDivisi);
-            console.log(namaDivisi);
+
             if(namaDivisi.length < 5){
                 pesanUmumApp('warning', 'Fill field !!!', 'Harap isi semua field !!!');
             }else{
                 let keterangan = document.querySelector("#txtKeterangan").value;
                 let ds = {'nama':namaDivisi, 'keterangan':keterangan}
                 axios.post(rProsesTambahDivisi, ds).then(function(res){
-                    // pesanUmumApp('success', 'Sukses', 'Data divisi berhasil di tambahkan ...');
-                    $('#modalTambahDivisi').appendTo("body").modal('hide');
+                    pesanUmumApp('success', 'Sukses', 'Data divisi berhasil di tambahkan ...');  
+                    $('#modalTambahDivisi').modal('hide');
                     setTimeout(function(){
                         renderPage('app/divisi', 'Data Divisi');
-                    }, 1000);
+                    }, 300);
                 });
             }
         },
