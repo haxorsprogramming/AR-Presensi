@@ -15,7 +15,7 @@
                 <i class="mdi mdi-database mr-2"></i>Data Master <div class="arrow-down"></div>
             </a>
             <div class="dropdown-menu" aria-labelledby="topnav-layout">
-                <a href="javascript:void(0)" class="dropdown-item">Data Karyawan</a>
+                <a href="javascript:void(0)" onclick="renderPage('app/karyawan', 'Data Karyawan')" class="dropdown-item">Data Karyawan</a>
                 <a href="javascript:void(0)" onclick="renderPage('app/divisi', 'Data Divisi')" class="dropdown-item">Data Divisi</a>
                 <a href="javascript:void(0)" class="dropdown-item">Kategori Absensi</a>
             </div>

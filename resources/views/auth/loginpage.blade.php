@@ -36,8 +36,8 @@
                             </h3>
 
                             <div class="p-3">
-                                <h4 class="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
-                                <p class="text-muted text-center">Sign in to continue to Lexa.</p>
+                                <h4 class="text-muted font-size-18 mb-1 text-center">Aplikasi Presensi Terintegrasi</h4>
+                                <p class="text-muted text-center">Sign in to continue.</p>
                                 <div class="form-horizontal mt-4">
                                     <div class="mb-3">
                                         <label for="username">Username</label>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <p>Don't have an account ? <a href="pages-register.html" class="text-primary"> Signup Now </a></p>
+                        <p>Don't have an account ? <a href="javascript:void(0)" class="text-primary"> Signup Now </a></p>
                        {{ env('APP_NAME') }} ©  Aditia Darma Nst <span class="d-none d-sm-inline-block"> - Theme by Themesbrand.</span>
                     </div>
                 </div>
