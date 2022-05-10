@@ -41,14 +41,29 @@ class C_Divisi extends Controller
                 $cnd = M_Divisi::where('nama_divisi', $request -> nama) -> first();
                 if($cnd -> nama_divisi != $request -> nama){
                     $this -> subProsesUpdateDivisi($request -> kdDivisi, $request -> nama, $request -> keterangan);
+                }else{
+                    if($request -> keterangan != null){
+                        M_Divisi::where('kd_divisi', $request -> kdDivisi) -> update([
+                            'keterangan' => $request ->keterangan
+                        ]);
+                    }
                 }
             }else{
                 $this -> subProsesUpdateDivisi($request -> kdDivisi, $request -> nama, $request -> keterangan);
             }
         }
+       
+        $dr = ['status' =>  'sukses'];
+        return \Response::json($dr);
+    }
+
+    public function prosesDeleteDivisi(Request $request)
+    {
+        M_Divisi::where('kd_divisi', $request -> kdDivisi) -> delete();
         $dr = ['status' => 'sukses'];
         return \Response::json($dr);
     }
+
 
     function subProsesTambahDivisi($nama, $keterangan)
     {

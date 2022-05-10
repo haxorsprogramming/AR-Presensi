@@ -1,6 +1,7 @@
 // route 
 var rProsesTambahDivisi = server + "app/divisi/tambah/proses";
 var rProsesUpdateDivisi = server + "app/divisi/update/proses";
+var rProsesDeleteDisisi = server + "app/divisi/delete/proses";
 // vue object 
 var appDivisi = new Vue({
     el : '#divDivisi',
@@ -24,11 +25,27 @@ var appDivisi = new Vue({
         prosesUpdateDivisi : function()
         {
             confirmQuest('info', 'Konfirmasi', 'Update divisi ...?', function (x) {updateConfirm(appDivisi.kdDivisiEdit)});
+        },
+        deleteAtc : function(kdDivisi)
+        {
+            confirmQuest('info', 'Konfirmasi', 'Delete divisi ...?', function (x) {deleteConfirm(kdDivisi)});
         }
     }
 });
 // inisialisasi & fungsi
 $("#tblDataDivisi").dataTable();
+
+function deleteConfirm(kdDivisi)
+{
+    let ds = {'kdDivisi':kdDivisi}
+    axios.post(rProsesDeleteDisisi, ds).then(function(res){
+        pesanUmumApp('success', 'Sukses', 'Data divisi berhasil di hapus ...'); 
+            $("#modalEditDivisi").modal("hide");
+            setTimeout(function(){
+                renderPage('app/divisi', 'Data Divisi');
+            }, 300);
+    });
+}
 
 function updateConfirm(kdDivisi)
 {
@@ -37,7 +54,7 @@ function updateConfirm(kdDivisi)
     if(nama.length < 5){
         pesanUmumApp('warning', 'Fill field !!!', 'Harap isi semua field !!!');
     }else{
-        let keterangan = document.querySelector("#txtKeterangan").value;
+        let keterangan = document.querySelector("#txtKeteranganEdit").value;
         let ds = {'nama':nama, 'keterangan':keterangan, 'kdDivisi':kdDivisi}
         axios.post(rProsesUpdateDivisi, ds).then(function(res){
             pesanUmumApp('success', 'Sukses', 'Data divisi berhasil di update ...'); 
@@ -45,7 +62,6 @@ function updateConfirm(kdDivisi)
             setTimeout(function(){
                 renderPage('app/divisi', 'Data Divisi');
             }, 300);
-            
         });
     }
 }

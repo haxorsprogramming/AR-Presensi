@@ -24,4 +24,5 @@ Route::get('/app/divisi', [C_Divisi::class, 'divisipage']);
 Route::post('/app/divisi/tambah/proses', [C_Divisi::class, 'prosesTambahDivisi']);
 Route::get('/app/divisi/{id}/rest', [C_Divisi::class, 'dataDivisiRest']);
 Route::post('/app/divisi/update/proses', [C_Divisi::class, 'prosesUpdateDivisi']);
+Route::post('/app/divisi/delete/proses', [C_Divisi::class, 'prosesDeleteDivisi']);
 // api untuk rekap absensi otomatis 
