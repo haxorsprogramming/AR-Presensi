@@ -9,6 +9,7 @@ class M_User_Profile extends Model
     protected $table = "tbl_user_profile";
     protected $fillable = [
         'username',
+        'nip',
         'nama',
         'jenis_kelamin',
         'tempat_lahir',

@@ -16,6 +16,7 @@ class TblUserProfile extends Migration
         Schema::create('tbl_user_profile', function (Blueprint $table) {
             $table -> id();
             $table -> char('username', 150);
+            $table -> char('nip', 100) -> nullable();
             $table -> char('nama', 200);
             $table -> enum('jenis_kelamin', ['L', 'P']);
             $table -> char('tempat_lahir', 200) -> nullable();

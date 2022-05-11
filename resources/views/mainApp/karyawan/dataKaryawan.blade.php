@@ -14,6 +14,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th>NIP</th>
                             <th>Nama</th>
                             <th>Divisi</th>
                             <th>Kontak / Alamat</th>
@@ -24,6 +25,7 @@
                     @foreach($dataKaryawan as $kar)
                     <tr>
                         <td>{{ $loop -> iteration }}</td>
+                        <td></td>
                         <td>
                             {{ $kar -> getUserProfile($kar -> username) -> nama }}<br/>
                             <strong>({{ $kar -> username }})</strong>
