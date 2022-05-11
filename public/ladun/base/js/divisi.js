@@ -40,10 +40,10 @@ function deleteConfirm(kdDivisi)
     let ds = {'kdDivisi':kdDivisi}
     axios.post(rProsesDeleteDisisi, ds).then(function(res){
         pesanUmumApp('success', 'Sukses', 'Data divisi berhasil di hapus ...'); 
-            $("#modalEditDivisi").modal("hide");
-            setTimeout(function(){
-                renderPage('app/divisi', 'Data Divisi');
-            }, 300);
+        $("#modalEditDivisi").modal("hide");
+        setTimeout(function(){
+            renderPage('app/divisi', 'Data Divisi');
+        }, 300);
     });
 }
 

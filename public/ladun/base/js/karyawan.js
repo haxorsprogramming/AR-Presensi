@@ -28,9 +28,36 @@ function prosesTambahKaryawan()
     if(appKaryawan.statusForm === false){
         pesanUmumApp('warning', 'Fill field !!!', 'Harap isi seluruh field !!!');
     }else{
-        
-        axios.post(rProsesTambahKaryawan).then(function(res){
-            console.log(res.data);
+        let nama = document.querySelector("#txtNamaLengkap").value;
+        let tanggalLahir = document.querySelector("#txtTanggalLahir").value;
+        let username = document.querySelector("#txtUsername").value;
+        let tempatLahir = document.querySelector("#txtTempatLahir").value;
+        let password = document.querySelector("#txtPassword").value;
+        let email = document.querySelector("#txtEmail").value;
+        let jk = document.querySelector("#txtJk").value;
+        let hp = document.querySelector("#txtHp").value;
+        let divisi = document.querySelector("#txtDivisi").value;
+        let alamat = document.querySelector("#txtAlamat").value;
+        let nip = document.querySelector("#txtNip").value;
+        let ds = {
+            'nama' : nama,
+            'tanggalLahir' : tanggalLahir,
+            'username' : username,
+            'tempatLahir' : tempatLahir,
+            'password' : password,
+            'email' : email,
+            'jk' : jk,
+            'hp' : hp,
+            'divisi' : divisi,
+            'alamat' : alamat,
+            'nip' : nip
+        }
+        axios.post(rProsesTambahKaryawan, ds).then(function(res){
+            pesanUmumApp('success', 'Sukses', 'Data karyawan baru berhasil disimpan ...'); 
+            $("#modalEditDivisi").modal("hide");
+            setTimeout(function(){
+                renderPage('app/karyawan', 'Data Karyawan');
+            }, 300);
         });
     }
 }

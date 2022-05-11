@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 
 use App\Models\M_User;
 use App\Models\M_Divisi;
+use App\Models\M_User_Profile;
 
 class C_Karyawan extends Controller
 {
@@ -19,6 +20,40 @@ class C_Karyawan extends Controller
 
     public function prosesTambahKaryawan(Request $request)
     {
+        // 'nama' : nama,
+        // 'tanggalLahir' : tanggalLahir,
+        // 'username' : username,
+        // 'tempatLahir' : tempatLahir,
+        // 'password' : password,
+        // 'email' : email,
+        // 'jk' : jk,
+        // 'hp' : hp,
+        // 'divisi' : divisi,
+        // 'alamat' : alamat,
+        // 'nip' : nip
+        M_User::firstOrCreate(
+            ['username' => $request -> username],
+            [
+                'username' => $request -> username,
+                'role' => 'karyawan',
+                'password' => password_hash($request -> password, PASSWORD_DEFAULT)
+            ]
+        );
+        M_User_Profile::firstOrCreate(
+            ['username' => $request -> username],
+            [
+                'username' => $request -> username,
+                'nip' => $request -> nip,
+                'nama' => $request -> nama,
+                'jenis_kelamin' => $request -> jk,
+                'tempat_lahir' => $request -> tempatLahir,
+                'tanggal_lahir' => $request -> tanggalLahir,
+                'alamat' => $request -> alamat,
+                'no_hp' => $request -> hp,
+                'email' => $request -> email,
+                'kd_divisi' => $request -> divisi
+            ]
+        );
         $dr = ['status' => 'sukses'];
         return \Response::json($dr);
     }

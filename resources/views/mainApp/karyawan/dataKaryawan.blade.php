@@ -25,7 +25,7 @@
                     @foreach($dataKaryawan as $kar)
                     <tr>
                         <td>{{ $loop -> iteration }}</td>
-                        <td></td>
+                        <td>{{ $kar -> getUserProfile($kar -> username) -> nip }}</td>
                         <td>
                             {{ $kar -> getUserProfile($kar -> username) -> nama }}<br/>
                             <strong>({{ $kar -> username }})</strong>

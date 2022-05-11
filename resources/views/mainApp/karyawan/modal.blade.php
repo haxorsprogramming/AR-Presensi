@@ -48,7 +48,7 @@
                             <div class="form-group col-md-6">
                                 <label>Jenis Kelamin</label>
                                 <select class="form-control" id="txtJk">
-                                    <option value="L">Laki Laki</option>
+                                    <option value="L">Laki-Laki</option>
                                     <option value="P">Perempuan</option>
                                 </select>
                             </div>
@@ -63,7 +63,7 @@
                                 <label>Divisi</label>
                                 <select class="form-control" id="txtDivisi">
                                 @foreach($dataDivisi as $divisi)
-                                    <option value="{{ $divisi -> kd_divisi }}}">{{ $divisi -> nama_divisi }}</option>
+                                    <option value="{{ $divisi -> kd_divisi }}">{{ $divisi -> nama_divisi }}</option>
                                 @endforeach
                                 </select>
                             </div>

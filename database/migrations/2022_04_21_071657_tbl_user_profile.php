@@ -23,7 +23,7 @@ class TblUserProfile extends Migration
             $table -> date('tanggal_lahir') -> nullable();
             $table -> text('alamat') -> nullable();
             $table -> char('no_hp', 20) -> nullable();
-            $table -> char('email', 20) -> nullable();
+            $table -> char('email', 220) -> nullable();
             $table -> char('kd_divisi', 50) -> nullable();
             $table -> timestamps();
         });
