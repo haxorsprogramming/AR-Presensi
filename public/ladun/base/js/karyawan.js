@@ -1,5 +1,6 @@
 // route 
 var rProsesTambahKaryawan = server + "app/karyawan/tambah/proses";
+var rProseHapusKaryawan = server + "app/karyawan/hapus/proses";
 // vue object 
 var appKaryawan = new Vue({
     el : '#appKaryawan',
@@ -14,12 +15,28 @@ var appKaryawan = new Vue({
         simpanDataAtc : function()
         {
             prosesTambahKaryawan();
+        },
+        deleteAtc : function(username)
+        {
+            confirmQuest('info', 'Konfirmasi', 'Delete divisi ...?', function (x) {deleteConfirm(username)});
         }
     }
 });
 
 // inisialisasi 
 $("#tblDataKaryawan").dataTable();
+
+function deleteConfirm(username)
+{
+    let ds = {'username':username}
+    axios.post(rProseHapusKaryawan, ds).then(function(res){
+        pesanUmumApp('success', 'Sukses', 'Data karyawan baru berhasil hapus ...'); 
+            $("#modalEditDivisi").modal("hide");
+            setTimeout(function(){
+                renderPage('app/karyawan', 'Data Karyawan');
+            }, 300);
+    });
+}
 
 function prosesTambahKaryawan()
 {

@@ -28,4 +28,5 @@ Route::post('/app/divisi/delete/proses', [C_Divisi::class, 'prosesDeleteDivisi']
 // karyawan 
 Route::get('/app/karyawan', [C_Karyawan::class, 'karyawanpage']);
 Route::post('/app/karyawan/tambah/proses', [C_Karyawan::class, 'prosesTambahKaryawan']);
+Route::post('/app/karyawan/hapus/proses', [C_Karyawan::class, 'prosesHapusKaryawan']);
 // api untuk rekap absensi otomatis 

@@ -20,17 +20,6 @@ class C_Karyawan extends Controller
 
     public function prosesTambahKaryawan(Request $request)
     {
-        // 'nama' : nama,
-        // 'tanggalLahir' : tanggalLahir,
-        // 'username' : username,
-        // 'tempatLahir' : tempatLahir,
-        // 'password' : password,
-        // 'email' : email,
-        // 'jk' : jk,
-        // 'hp' : hp,
-        // 'divisi' : divisi,
-        // 'alamat' : alamat,
-        // 'nip' : nip
         M_User::firstOrCreate(
             ['username' => $request -> username],
             [
@@ -54,6 +43,14 @@ class C_Karyawan extends Controller
                 'kd_divisi' => $request -> divisi
             ]
         );
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
+    }
+
+    public function prosesHapusKaryawan(Request $request)
+    {
+        M_User::where('username', $request -> username) -> delete();
+        M_User_Profile::where('username', $request -> username) -> delete();
         $dr = ['status' => 'sukses'];
         return \Response::json($dr);
     }
